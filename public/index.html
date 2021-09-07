@@ -1,0 +1,78 @@
+<!--
+only HTML file for this project.
+
+Author: William Jackson
+First created: 4 Sept 2021
+Last modified: 6 Sept 2021
+-->
+<head>
+  <script src = "card-rendering.js" type="text/javascript"></script>
+  <script src = "main.js" type="text/javascript"></script>
+  <link href = "styles.css" rel = "stylesheet"></link>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div id = "header">
+    <button class = "navbutton" onclick = "selectPage(0)">Home</button>
+    <button class = "navbutton" onclick = "selectPage(1)">Play</button>
+    <button class = "navbutton" onclick = "selectPage(2)">Rules</button>
+    <button class = "navbutton" onclick = "selectPage(3)">Settings</button>
+  </div>
+  <div id = "home" class = "page">
+    <div id = "pagecenter">
+      <h1>Dutch Blitz</h1>
+      <p>Dutch Blitz is a speed-based competitive card game for 2 or more people. It is based on solitaire, and goes by many other names:
+      Nertz, Pounce, Racing Demon, Peanuts, Squeal or Scrooge, to name a few.</p>
+      <p>I couldn't find a nice-looking website to play dutch blitz with my friends, so I did what any normal person would do and made by own!</p>
+      <p>The <a href = "fake" onclick = "return selectPage(1)">play</a> tab lets you create or join an online game over the internet with anyone in the world.
+         Need a refresher on the rules before you start? head over to <a href = "fake" onclick = "return selectPage(2)">rules</a> first. Lastly, if you want to customize
+          the look and feel of the site and your games, look in <a href = "fake" onclick = "return selectPage(3)">settings</a>.</p>
+    </div>
+  </div>
+  <div id = "play" class = "page">
+    <canvas id = "canvas"></canvas>
+  </div>
+  <div id = "rules" class = "page">
+    <div id = "pagecenter">
+      <h1>Rules</h1>
+      <h5>Players</h5>
+      <p>
+        Dutch blitz can be played with 2+ players. This site supports playing with 2-4 players.
+      </p>
+      <h5>The Cards</h5>
+      <p>
+        Each player has a deck of 40 cards, and each deck has a different colored backing. Cards are numbered 1-10, so 4 of each number per player. Half of those cards are "boy" cards, and the other half are "girl" cards.
+      </p>
+      <h5>Piles</h5>
+      <p>
+        Dutch blitz has several types of card piles during gameplay, which are listed below.<br>
+        Hand: these are the cards not placed in any other piles, held face-down in the player's hand.<br><br>
+        Blitz Pile: each player has 10 cards in their blitz pile, face up. This is the most important pile in the game, because getting rid of it ends the round. It cannot be shuffled or rearranged.<br><br>
+        Wood Pile: discard pile from the Hand.
+        Post Piles: cards that can be built on in descending (10 --> 1) and alternating (boy --> girl --> boy) order. Used to help get rid of cards from the blitz pile or wood pile.<br><br>
+        Dutch Piles: these are shared between all the players. Stacks of cards in ascending order, 1-10. All cards placed on the Dutch piles count as 1 point at the end of the round.
+      </p>
+      <h5>Gameplay</h5>
+      <p>
+        Gameplay begins when the host starts the round.<br><br>
+        Players must move any #1 card from blitz or post piles into the center Dutch Piles.<br><br>
+        cards can be stacked on the post piles (if allowed), and any empty slots in the post piles can be replaced by a new card from the blitz or wood pile.<br><br>
+        At any point, you are allowed to flip the top 3 cards from your hand onto the wood pile, face up. Cards must be moved in groups of 3, and only the top card of the wood pile can be played.<br><br>
+        When you run out of cards in your hand, pick up the wood pile and flip it back over. This becomes the new hand.<br><br>
+        Whenever one player runs out of blitz cards, they call "blitz" and the round is over. Your score is the number of cards you place in the center minus the cards in your blitz pile.
+      </p>
+    </div>
+  </div>
+  <div id = "settings" class = "page">
+    <div id = "pagecenter">
+      <h1>Settings</h1>
+      <div class = settingcontainer>
+        <p>Theme:</p> <button class = "themebutton" onclick = "globalTheme(0)" id = "lighttheme"></button> <button class = "themebutton" onclick = "globalTheme(1)" id = darktheme></button>
+      </div>
+    </div
+  </div>
+  <p id = "author-info">(c) 2021 William Jackson<br>MIT License. <a href = 'https://github.com/pancake423/dutch-blitz' target="_blank" rel="noopener noreferrer">Source code</a></p>
+</body>

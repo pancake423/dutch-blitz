@@ -1,0 +1,121 @@
+/*
+only CSS file for this project.
+
+author: William Jackson
+Date started: 4 Sept 2021
+Last modified: 6 Sept 2021
+*/
+:root {
+  --header-bg-color: black;
+  --header-text-color: white;
+  --header-accent-color: #ffa599;
+  --author-text-color: #888888;
+  --main-body-color: white;
+  --main-text-color: black;
+}
+body {
+  margin: 0px;
+  color: var(--main-text-color);
+  background-color: var(--main-body-color);
+  font-family: 'Oxygen', sans-serif;
+  user-select: none;
+  transition-duration: 0.25s;
+}
+a {
+  color: var(--header-accent-color);
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10%;
+  width: 100%;
+  background-color: var(--header-bg-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+#home {
+  display: block;
+  text-align: left;
+  padding-top: 32px;
+  font-size: 24px;
+}
+#pagecenter {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+#play {
+  display: none;
+}
+#canvas {
+  width: 100%;
+  height: 100%;
+}
+#rules {
+  display: none;
+  text-align: left;
+  padding-top: 32px;
+  font-size: 24px;
+}
+#settings {
+  display: none;
+  text-align: left;
+  padding-top: 32px;
+  font-size: 24px;
+}
+#lighttheme {
+  background-color: #dddddd;
+}
+
+#darktheme {
+  background-color: #000000;
+}
+
+#author-info {
+  position: fixed;
+  text-align: left;
+  right: 16px;
+  bottom: 8px;
+  color: var(--author-text-color);
+}
+
+.page {
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  left: 0;
+
+}
+.navbutton {
+  font-size: 24px;
+  font-family: 'Oxygen', sans-serif;
+  color: var(--header-text-color);
+  border:none;
+  user-select: hidden;
+  background-color: var(--header-bg-color);
+  margin: 16px;
+}
+.navbutton:hover {
+  color: var(--header-accent-color);
+}
+
+.themebutton {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin: 5px;
+}
+.settingcontainer {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+}
